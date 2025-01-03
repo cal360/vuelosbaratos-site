@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZF490TT11"></script>
 <script>
@@ -11,7 +10,6 @@
 
   gtag('config', 'G-NZF490TT11');
 </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VuelosBaratos.ai</title>
@@ -25,17 +23,23 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+			background: url("sky_background.webp");
+			background-size: 100vw 100%;
+			
         }
         .container {
             max-width: 800px;
             margin: 50px auto;
 			margin-top: 0;
+			margin-bottom:0;
             background: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             padding: 20px;
             text-align: center;
             flex: 1;
+            overflow: hidden; /* Prevent any overflow issues */
         }
         .header {
             padding: 20px;
@@ -47,6 +51,7 @@
             margin: 0;
             font-size: 2.8rem;
             font-weight: bold;
+            white-space: nowrap; /* Prevent text wrapping */
         }
         .header h1 .highlight {
             color: #FFD700;
@@ -58,7 +63,7 @@
         .content p {
             font-size: 1.2rem;
             margin: 20px 0;
-            line-height: 1.8;
+            line-height: 1.5;
             color: #333;
         }
         .highlights {
@@ -123,11 +128,38 @@
             color: #666;
             text-align: center;
             padding: 10px 0;
-            background-color: #f8f9fa; /* Matches the body background */
+            background-color: transparent; /* Matches the body background */
             width: 100%;
             border-top: 1px solid #ddd;
             flex-shrink: 0;
+        }
+
+        /* Responsive Styles for Smartphones */
+        @media (max-width: 480px) {
 			
+			
+		
+            .container {
+                margin: 0px; /* Reduce margins for smaller screens */
+                width: calc(100% - 40px); /* Ensure container fits within viewport */
+				
+              
+            }
+            .header h1 {
+                font-size: 2rem; /* Adjust font size for smaller screens */
+            }
+            .content p {
+                font-size: 1rem; /* Reduce paragraph text size */
+            }
+            button {
+                font-size: 0.9rem; /* Adjust button text size */
+                padding: 8px;
+            }
+            .footer {
+                font-size: 0.75rem; /* Adjust footer font size */
+                padding: 8px 0;
+				background-color: #f8f9fa;
+            }
         }
     </style>
 </head>
@@ -137,7 +169,7 @@
             <h1>VuelosBaratos<span class="highlight">.ai</span></h1>
         </div>
         <div class="content">
-            <p><strong>Why VuelosBaratos.ai?</strong> This domain is your gateway to dominating the travel industry in Latin America with a product focused on cutting-edge AI technology. Target budget-conscious travelers with unmatched precision and impact.</p>
+            <p><strong>Why VuelosBaratos.ai?</strong></br> This domain is your gateway to dominating the travel industry in Latin America with a product focused on cutting-edge AI technology. Target budget-conscious travelers with unmatched precision and impact.</p>
             <div class="highlights">
                 <ul>
                     <li>Top-tier keyword with instant appeal.</li>
